@@ -7,7 +7,6 @@ const EditPost = async (req, res, next) => {
         const content = req.body.content
         const result = await Post.findByIdAndUpdate(id, { title, content } )
         res.send(result)
-        console.log(title, content)
     } catch(e) {
         res.status(400).send('You are missing something!')
     }
